@@ -13,12 +13,12 @@ namespace DigitalOrder.Application.Mapping.Product
                 .ForMember(dest => dest.ProductType, opt => opt.MapFrom(src => src.Type))
                 .ForMember(dest => dest.ProductDetails, opt => opt.MapFrom(src => src.Details));
 
-            /*CreateMap<AddProductCommand, Entities.Product>()
+            // Define the reverse mapping
+            CreateMap<AddProductCommand, Entities.Product>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ProductName))
                 .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.ProductPrice))
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.ProductType))
-                .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.ProductDetails));*/
+                .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.ProductDetails));
         }
     }
-
 }
